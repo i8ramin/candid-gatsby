@@ -1,11 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Link from "gatsby-link"
-import Helmet from "react-helmet"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 
-// import "../css/typography.css"
-import "../css/global.css"
-import styles from "../css/styles.module.css"
+import Link from 'gatsby-link';
+import { Provider } from 'rebass';
+
+import Header from './header';
+
+import '../css/global.scss';
+import styles from '../css/styles.module.scss';
 
 export default class Template extends React.Component {
   static propTypes = {
@@ -32,8 +36,10 @@ export default class Template extends React.Component {
             breakpoints: [ 32, 48, 64, 80, 90 ]
           }}
         >
-          {this.props.children()}
-        <Provider>
+          <Header />
+          { this.props.children() }
+
+        </Provider>
       </div>
     )
   }
