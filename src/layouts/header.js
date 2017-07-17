@@ -8,14 +8,14 @@ import { srcToCDN } from '../lib/util';
 import Hamburger from '../components/hamburger/hamburger';
 import Button from '../components/button/button';
 
-const Header = ({ menuOpen, dispatch }) => {
+const Header = ({ menuOpen, toggleMenu }) => {
   const headerClasses = cn(
     'header',
     { 'menu-open': menuOpen },
   );
 
   const onUnpinCallback = () => {
-    dispatch(toggleMenu(false));
+    toggleMenu(false);
   }
 
   return (
@@ -62,8 +62,12 @@ const Header = ({ menuOpen, dispatch }) => {
   );
 }
 
-const mapStateToProps = ({ menuOpen })  => ({
-  menuOpen,
+const mapStateToProps = (state)  => ({
+  menuOpen: state.menuOpen,
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = dispatch => {
+  return { toggleMenu: (menuOpen) => dispatch({ type: `TOGGLE_MENU`, menuOpen }) }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
