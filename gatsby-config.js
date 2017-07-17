@@ -7,6 +7,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
   ],
 }
