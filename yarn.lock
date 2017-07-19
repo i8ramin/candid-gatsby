@@ -2732,6 +2732,10 @@ gatsby-link@^1.0.1:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
+gatsby-plugin-canonical-urls@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-1.0.1.tgz#dbad5aeae4c22e1e618295a4c00895408d142753"
+
 gatsby-plugin-nprogress@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-1.0.1.tgz#1031a75907093dda98f3812d5723f83740decced"
