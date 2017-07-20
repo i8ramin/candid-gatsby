@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: `https://www.candidco.com`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
